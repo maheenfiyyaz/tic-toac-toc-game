@@ -1,0 +1,55 @@
+body {
+    background-color: #152238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color:#1c2e4a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px white;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd;
+    background-color: #e8d5ff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #d4aaff;
+    cursor: pointer;
+}
+
+.cell.x::before {
+    content: 'X';
+    font-size: 2rem;
+    color: #512da8;
+}
+
+.cell.o::before {
+    content: 'O';
+    font-size: 2rem;
+    color: #5c40e1;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #792da8;
+}
